@@ -15,8 +15,8 @@
   div.style['background-size']="cover";
   div.style['background-repeat']="no-repeat";
   div.style.borderColor = "#000";
-  div.style.width = "80px";
-  div.style.height = "80px";
+  div.style.width = "40px";
+  div.style.height = "40px";
   div.style.position = "absolute";
   div.style['font-size'] = "20px";
   div.style['text-align'] = "contain";
@@ -110,7 +110,7 @@
   gndiv = document.createElement("div");
   
   html = '<a style="padding: 0px 2px 0px 0px;float: right;color:#c53d43;" href="javascript:关闭菜单()">x</a><br>';
-  html+='<a>小叶子</a></br>';
+  html+='<a>小叶砸</a></br>';
   html+='<button type="button" style="background-color:#f3bf88" onclick="Boss(1)">打一次boss</button>';
 html+='</br>';
   html+='<button type="button" style="background-color:#f3bf88" onclick="UIManager.skillbarpanel.setVisible(true);">擦,大哥！</button>';
