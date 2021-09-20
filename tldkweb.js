@@ -130,8 +130,6 @@ html+='</br>';
 html+='</br>';
   html+='<button type="button" style="background-color:#f3bf88" onclick="smj()">刷秘境</button>';
 html+='</br>';
-  html+='<button type="button" style="background-color:#f3bf88" onclick="khb()">开红包1200个</button>';
-html+='</br>';
   html+='<button type="button" style="background-color:#f3bf88" onclick="dgs()">打怪兽350次</button>';
 html+='</br>';
 html+='</br>';
