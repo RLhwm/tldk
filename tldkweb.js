@@ -110,7 +110,6 @@
   gndiv = document.createElement("div");
   
   html = '<a style="padding: 0px 2px 0px 0px;float: right;color:#c53d43;" href="javascript:关闭菜单()">x</a><br>';
-  html+='<a>小叶砸</a></br>';
   html+='<button type="button" style="background-color:#f3bf88" onclick="Boss(1)">打一次boss</button>';
 html+='</br>';
   html+='<button type="button" style="background-color:#f3bf88" onclick="UIManager.skillbarpanel.setVisible(true);">擦,大哥！</button>';
@@ -142,7 +141,7 @@ html+='</br>';
   gndiv.setAttribute("align", "center");
   gndiv.style.display="none";
   gndiv.style.width = (document.documentElement.clientWidth/3)+"px";
-  gndiv.style.height = (window.screen.height/3)+"px";
+  gndiv.style.height = (window.screen.height/2)+"px";
   gndiv.style.background="#9e9478"
   gndiv.style.overflow="hidden";
   gndiv.style['overflow-y']="scroll";
