@@ -15,8 +15,8 @@
   div.style['background-size']="cover";
   div.style['background-repeat']="no-repeat";
   div.style.borderColor = "#000";
-  div.style.width = "40px";
-  div.style.height = "40px";
+  div.style.width = "50px";
+  div.style.height = "50px";
   div.style.position = "absolute";
   div.style['font-size'] = "20px";
   div.style['text-align'] = "contain";
