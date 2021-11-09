@@ -1,7 +1,3 @@
-# tldk
-
-
-//创建一个div  
 var div = document.createElement("div");
 div.id = "xyzxfc";
 //为div创建属性class = "viewPoint"  
