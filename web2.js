@@ -1,4 +1,5 @@
-   var div = document.createElement("div");
+  //创建一个div  
+  var div = document.createElement("div");
   div.id = "xyzxfc";
   //为div创建属性class = "viewPoint"  
   var divattr = document.createAttribute("class");
@@ -14,8 +15,9 @@
   div.style['background-size']="cover";
   div.style['background-repeat']="no-repeat";
   div.style.borderColor = "#000";
-  div.style.width = "80px";
-  div.style.height = "80px";
+  div.style.width = "50px";
+  div.style.height = "50px";
+//头像大小
   div.style.position = "absolute";
   div.style['font-size'] = "20px";
   div.style['text-align'] = "contain";
@@ -131,7 +133,8 @@ html+='</br>';
   gndiv.setAttribute("align", "center");
   gndiv.style.display="none";
   gndiv.style.width = (document.documentElement.clientWidth/3)+"px";
-  gndiv.style.height = (window.screen.height/3)+"px";
+  gndiv.style.height = (window.screen.height/2.5)+"px";
+//功能框调整宽高
   gndiv.style.background="#9e9478"
   gndiv.style.overflow="hidden";
   gndiv.style['overflow-y']="scroll";
@@ -290,97 +293,6 @@ function dsj() {
     300);
 };
 
-function 丢材料() {
-    showCenterTip("复活币丢仓库里！");
-    showCenterTip("丢弃材料中······请稍后");
-var f=0;
-var arr =[];
-var time = 200;
-for(var i = 1;i<BagData.bagData.length;i++){
-if(BagData.bagData[i].icon<=91940&&BagData.bagData[i].icon>=91010&&arr.length<=20){
-f=i+1;
-arr[arr.length] = f;
-};
-};
-Msg.CG_BAG_DISCARD(arr);
-};
-function 熔炼() {
-    showCenterTip("熔炼中······请稍后");
-var time = 1000;
- for (var i = 1; i < 80; i++) {
-                setTimeout("Msg.CG_RONGLIAN_LIST([1]);", time + 220 * i);
-            };
-};
-
-function smj() {
-    oopop = 0;
-    flag = 0;
-    flag2 = 0;
-    flag3 = 0;
-    Global.hero.speed = 99999;
-	showCenterTip("秘境进行中······请稍后");
-        setInterval("SkillData.skills1[0].use();", 10000);
-        setInterval("Msg.CG_BAG_DISCARD_QUICK();Global.hero.speed = 99999;", 10000);
-    setInterval(function() {
-        if (MapManager.mapLv > -1 && flag != 2) {
-            AutoGameManager.start();
-        }
-        if (MapManager.mapLv == -2 && flag == 0) {
-            Global.hero.initPos(28, 25);
-            Global.hero.end_x = Global.hero.x;
-            Global.hero.end_y = Global.hero.y;
-            setTimeout("AutoGameManager.start();", 1000);
-            flag = 2;
-        } else {
-            if (oopop == 2) {
-                AutoTask.autoNext();
-                setTimeout(" AutoTask.autoNext();", 1000);
-                setTimeout(" AutoTask.autoNext();", 3000);
-                AutoGameManager.start();
-                oopop = 1;
-            }
-            if (Global.hero.end_x < 0 && oopop == 0) {
-	TopupHandler.GC_PANEL_OPEN(112);
-	setTimeout("var shortName = DMJLyt.onlyPanel.dmj.txtDif1._text.substring(DMJLyt.onlyPanel.dmj.txtDif1._text.length-2,DMJLyt.onlyPanel.dmj.txtDif1._text.length);", 1000);
-	setTimeout("Msg.CG_MJSL_ENTER(shortName);shortName++", 1500);
-	setTimeout("Msg.CG_MJSL_ENTER(shortName);shortName++", 2000);
-	setTimeout("Msg.CG_MJSL_ENTER(shortName);shortName++", 2500);
-	setTimeout("Msg.CG_MJSL_ENTER(shortName);shortName++", 3000);
-	setTimeout("Msg.CG_MJSL_ENTER(shortName);shortName++", 3500);
-                MapManager.mapLv = 2;
-                oopop = 1;
-            }
-        }
-        if (Global.hero.end_x < 0 && flag2 == 0) {
-            flag2 = 2;
-            flag3 = 0;
-        }
-        if (flag2 == 2 && flag3 == 0) {
-            setTimeout("oopop = 0;flag = 0;flag2 = 0;smj();", time + 1000);
-            flag3 = 1;
-        }
-    },
-    1000);
-};
-
-function khb() {
-showCenterTip("开红包中······请稍后");
-for(var i = 1;i<BagData.bagData.length;i++){
-if(BagData.bagData[i].name=="红包"){
-f=i+1;
-}
-};
-for(var j = 1;j<1187;j++){
-setTimeout("Msg.CG_ITEM_USE("+f+",0,0)",1000+220*j);
-};
-};
-
-function dgs() {
-showCenterTip("打怪兽中······请稍后");
-for(var i = 1;i<351;i++){
-setTimeout("Msg.CG_HOLIDAY_KICK_MONSTER_DO_KICK()",220*i);
-};
-};
 function shuaLC() {
 showCenterTip("自行选择圣物卷轴后再使用！");
     setInterval(function() {
