@@ -139,12 +139,12 @@ html+='</br>';
   gndiv.setAttribute("align", "center");
   gndiv.style.display="none";
   gndiv.style.width = (document.documentElement.clientWidth/3)+"px";
-  gndiv.style.height = (window.screen.height/2)+"px";
+  gndiv.style.height = (window.screen.height/3)+"px";
   gndiv.style.background="#9e9478"
   gndiv.style.overflow="hidden";
   gndiv.style['overflow-y']="scroll";
   gndiv.style['overflow-x']="hidden";
-
+  gndiv.style.overflow = "scroll";//滚动？
 
   gndiv.innerHTML = html
   div.appendChild(gndiv);
