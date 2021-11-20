@@ -126,6 +126,14 @@ html+='</br>';
 html+='</br>';
 html += '<button type="button" style="background-color:#f3bf88" onclick="shuaLC()">刷楼层数</button>';
 html+='</br>';
+html += '<button type="button" style="background-color:#f3bf88" onclick="shuaLC()">刷楼层数</button>';
+html+='</br>';
+html += '<button type="button" style="background-color:#f3bf88" onclick="shuaLC()">刷楼层数</button>';
+html+='</br>';
+html += '<button type="button" style="background-color:#f3bf88" onclick="shuaLC()">刷楼层数</button>';
+html+='</br>';
+html += '<button type="button" style="background-color:#f3bf88" onclick="shuaLC()">刷楼层数</button>';
+html+='</br>';
 html+='</br>';
 html+='</br>';
   
@@ -133,13 +141,13 @@ html+='</br>';
   gndiv.setAttribute("align", "center");
   gndiv.style.display="none";
   gndiv.style.width = (document.documentElement.clientWidth/3)+"px";
-  gndiv.style.height = (window.screen.height/2.5)+"px";
+  gndiv.style.height = (window.screen.height/3)+"px";
 //功能框调整宽高
   gndiv.style.background="#9e9478"
   gndiv.style.overflow="hidden";
   gndiv.style['overflow-y']="scroll";
   gndiv.style['overflow-x']="hidden";
-
+  gndiv.style.overflow = "scroll";
 
   gndiv.innerHTML = html
   div.appendChild(gndiv);
