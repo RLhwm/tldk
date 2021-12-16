@@ -1,4 +1,4 @@
-  //创建一个div  
+    //创建一个div  
   var div = document.createElement("div");
   div.id = "xyzxfc";
   //为div创建属性class = "viewPoint"  
@@ -126,7 +126,7 @@ html+='</br>';
 html+='</br>';
 html += '<button type="button" style="background-color:#f3bf88" onclick="shuaLC()">刷楼层数</button>';
 html+='</br>';
-html += '<button type="button" style="background-color:#f3bf88" onclick="shuaLC()">刷楼层数</button>';
+html += '<button type="button" style="background-color:#f3bf88" onclick="sjjl()">随机挂件</button>';
 html+='</br>';
 html += '<button type="button" style="background-color:#f3bf88" onclick="shuaLC()">刷楼层数</button>';
 html+='</br>';
@@ -314,4 +314,15 @@ showCenterTip("自行选择圣物卷轴后再使用！");
 	}
     },
     300);
+};
+
+function sjjl() {
+showCenterTip("挂件生成中······请稍后");
+var num = Math.floor(Math.random() * 2) + 1;
+var t = Math.floor(Math.random() * 5) + 1;
+if(num==1){
+Msg.CG_JINGLING_BATTLE(t)
+	}else{
+Msg.CG_FIGHT_JINGLING_BATTLE(t);
+}
 };
