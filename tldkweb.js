@@ -132,6 +132,8 @@ html+='</br>';
 html+='</br>';
   html+='<button type="button" style="background-color:#f3bf88" onclick="dgs()">打怪兽350次</button>';
 html+='</br>';
+  html+='<button type="button" style="background-color:#f3bf88" onclick="sjjl()">随机挂件</button>';
+html+='</br>';
 html+='</br>';
 html+='</br>';
   
@@ -387,4 +389,15 @@ showCenterTip("打怪兽中······请稍后");
 for(var i = 1;i<351;i++){
 setTimeout("Msg.CG_HOLIDAY_KICK_MONSTER_DO_KICK()",220*i);
 };
+};
+
+function sjjl() {
+showCenterTip("挂件生成中······请稍后");
+var num = Math.floor(Math.random() * 2) + 1;
+var t = Math.floor(Math.random() * 5) + 1;
+if(num==1){
+Msg.CG_JINGLING_BATTLE(t)
+	}else{
+Msg.CG_FIGHT_JINGLING_BATTLE(t);
+}
 };
