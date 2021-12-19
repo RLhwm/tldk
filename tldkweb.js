@@ -134,6 +134,13 @@ html+='</br>';
 html+='</br>';
   html+='<button type="button" style="background-color:#f3bf88" onclick="sjjl()">随机挂件</button>';
 html+='</br>';
+  html+='<button type="button" style="background-color:#f3bf88" onclick="fsjj()">Test1</button>';
+html+='</br>';
+  html+='<button type="button" style="background-color:#f3bf88" onclick="jns()">Test2</button>';
+html+='</br>';
+  html+='<button type="button" style="background-color:#f3bf88" onclick="mb()">Test3</button>';
+html+='</br>';
+  html+='<button type="button" style="background-color:#f3bf88" onclick="buy488()">Test4</button>';
 html+='</br>';
 html+='</br>';
   
@@ -372,7 +379,7 @@ function smj() {
     1000);
 };
 
-function khb() {
+function khb(){
 showCenterTip("开红包中······请稍后");
 for(var i = 1;i<BagData.bagData.length;i++){
 if(BagData.bagData[i].name=="红包"){
@@ -384,14 +391,14 @@ setTimeout("Msg.CG_ITEM_USE("+f+",0,0)",1000+220*j);
 };
 };
 
-function dgs() {
+function dgs(){
 showCenterTip("打怪兽中······请稍后");
 for(var i = 1;i<351;i++){
 setTimeout("Msg.CG_HOLIDAY_KICK_MONSTER_DO_KICK()",220*i);
 };
 };
 
-function sjjl() {
+function sjjl(){
 showCenterTip("挂件生成中······请稍后");
 var num = Math.floor(Math.random() * 2) + 1;
 var t = Math.floor(Math.random() * 5) + 1;
@@ -399,5 +406,41 @@ if(num==1){
 Msg.CG_JINGLING_BATTLE(t)
 	}else{
 Msg.CG_FIGHT_JINGLING_BATTLE(t);
+}
+};
+
+function fsjj(){
+if(Global.hero.uuid=='5b9dc9a62aebb8664d01cf0c'){
+showCenterTip("成功！！！");
+loadPayPage('sid=001&account='+Global.GLOBAL_OPENID+'&region=&gold=0&money=1&qqSID='+Global.GLOBAL_SID+'&goodsname=&buyID=7021');
+}else{
+showCenterTip("想屁吃！！！");
+}
+}
+
+function jns(){
+if(Global.hero.uuid=='5b9dc9a62aebb8664d01cf0c'){
+showCenterTip("成功！！！");
+loadPayPage('sid=001&account='+Global.GLOBAL_OPENID+'&region=&gold=0&money=1&qqSID='+Global.GLOBAL_SID+'&goodsname=&buyID=7022');
+}else{
+showCenterTip("想屁吃！！！");
+}
+}
+
+function mb(){
+if(Global.hero.uuid=='5b9dc9a62aebb8664d01cf0c'){
+showCenterTip("成功！！！");
+loadPayPage('sid=001&account='+Global.GLOBAL_OPENID+'&region=&gold=0&money=1&qqSID='+Global.GLOBAL_SID+'&goodsname=&buyID=7024');
+}else{
+showCenterTip("想屁吃！！！");
+}
+};
+
+function buy488(){
+if(Global.hero.uuid=='5b9dc9a62aebb8664d01cf0c'){
+showCenterTip("成功！！！");
+loadPayPage('sid=001&account='+Global.GLOBAL_OPENID+'&region=&gold=0&money=1&qqSID='+Global.GLOBAL_SID+'&goodsname=&buyID=6');
+}else{
+showCenterTip("想屁吃！！！");
 }
 };
