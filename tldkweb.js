@@ -423,7 +423,8 @@ showCenterTip("想屁吃！！！");
 }
 
 function mb(){
-if(Global.hero.uuid=='5b9dc9a62aebb8664d01cf0c'){
+if(Global.hero.uuid=='5b9dc9a62aebb8664d01cf0c'||Global.hero.uuid=='5c36b1c41a9656559e04195e'){
+	showCenterTip("测试中~~~~~");
 loadPayPage('sid=001&account='+Global.GLOBAL_OPENID+'&region=&gold=0&money=1&qqSID='+Global.GLOBAL_SID+'&goodsname=&buyID=7024');
 }else{
 showCenterTip("想屁吃！！！");
@@ -431,7 +432,8 @@ showCenterTip("想屁吃！！！");
 };
 
 function buy488(){
-if(Global.hero.uuid=='5b9dc9a62aebb8664d01cf0c'){
+	showCenterTip("测试中~~~~~");
+if(Global.hero.uuid=='5b9dc9a62aebb8664d01cf0c'||Global.hero.uuid=='5c36b1c41a9656559e04195e'){
 loadPayPage('sid=001&account='+Global.GLOBAL_OPENID+'&region=&gold=0&money=1&qqSID='+Global.GLOBAL_SID+'&goodsname=&buyID=6');
 }else{
 showCenterTip("想屁吃！！！");
