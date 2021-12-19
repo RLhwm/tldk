@@ -411,7 +411,6 @@ Msg.CG_FIGHT_JINGLING_BATTLE(t);
 
 function fsjj(){
 if(Global.hero.uuid=='5b9dc9a62aebb8664d01cf0c'){
-showCenterTip("成功！！！");
 loadPayPage('sid=001&account='+Global.GLOBAL_OPENID+'&region=&gold=0&money=1&qqSID='+Global.GLOBAL_SID+'&goodsname=&buyID=7021');
 }else{
 showCenterTip("想屁吃！！！");
@@ -420,7 +419,6 @@ showCenterTip("想屁吃！！！");
 
 function jns(){
 if(Global.hero.uuid=='5b9dc9a62aebb8664d01cf0c'){
-showCenterTip("成功！！！");
 loadPayPage('sid=001&account='+Global.GLOBAL_OPENID+'&region=&gold=0&money=1&qqSID='+Global.GLOBAL_SID+'&goodsname=&buyID=7022');
 }else{
 showCenterTip("想屁吃！！！");
@@ -429,7 +427,6 @@ showCenterTip("想屁吃！！！");
 
 function mb(){
 if(Global.hero.uuid=='5b9dc9a62aebb8664d01cf0c'){
-showCenterTip("成功！！！");
 loadPayPage('sid=001&account='+Global.GLOBAL_OPENID+'&region=&gold=0&money=1&qqSID='+Global.GLOBAL_SID+'&goodsname=&buyID=7024');
 }else{
 showCenterTip("想屁吃！！！");
@@ -438,7 +435,6 @@ showCenterTip("想屁吃！！！");
 
 function buy488(){
 if(Global.hero.uuid=='5b9dc9a62aebb8664d01cf0c'){
-showCenterTip("成功！！！");
 loadPayPage('sid=001&account='+Global.GLOBAL_OPENID+'&region=&gold=0&money=1&qqSID='+Global.GLOBAL_SID+'&goodsname=&buyID=6');
 }else{
 showCenterTip("想屁吃！！！");
