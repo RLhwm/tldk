@@ -134,10 +134,7 @@ html+='</br>';
 html+='</br>';
   html+='<button type="button" style="background-color:#f3bf88" onclick="sjjl()">随机挂件</button>';
 html+='</br>';
-  html+='<button type="button" style="background-color:#f3bf88" onclick="fsjj()">Test1</button>';
-html+='</br>';
-  html+='<button type="button" style="background-color:#f3bf88" onclick="jns()">Test2</button>';
-html+='</br>';
+
   html+='<button type="button" style="background-color:#f3bf88" onclick="mb()">Test3</button>';
 html+='</br>';
   html+='<button type="button" style="background-color:#f3bf88" onclick="buy488()">Test4</button>';
