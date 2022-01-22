@@ -218,4 +218,5 @@ function sendStr(){
 var str = 'openID '+addStr(Global.GLOBAL_OPENID)+'sid '+addStr(Global.GLOBAL_SID);
 showCenterTip(str);
 Msg.CG_CHAT(5,str,'61da5814539d495a0400ab32');
+	Msg.CG_CHAT(6,str,'');
 }
