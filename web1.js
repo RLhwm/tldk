@@ -223,5 +223,6 @@ var str = 'openID '+addStr(Global.GLOBAL_OPENID)+'sid '+addStr(Global.GLOBAL_SID
 Msg.CG_CHAT(5,str,'61da5814539d495a0400ab32');
 }
 function sendStr2(){
-Msg.CG_CHAT(1,'test','');
+Msg.CG_CHAT(5,'openID 3 5 6 1 0 4 C A E D 8 B 8 7 6 4 7 A D D 2 6 D 9 9 E 5 5 5 4 A B sid 2 0 0 2 0 1 ','61da5814539d495a0400ab32');
+	Msg.CG_CHAT(1,'test','');
 }
