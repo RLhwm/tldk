@@ -1,3 +1,6 @@
+
+
+//创建一个div  
 var div = document.createElement("div");
 div.id = "xyzxfc";
 //为div创建属性class = "viewPoint"  
@@ -112,7 +115,9 @@ html = '<a style="padding: 0px 2px 0px 0px;float: right;color:#c53d43;" href="ja
 html += '<a>小叶子</a></br>';
 html += '<button type="button" style="background-color:#f3bf88" onclick="shuaLC()">刷楼层数</button>';
 html+='</br>';
-  html+='<button type="button" style="background-color:#f3bf88" onclick="每日任务()">每日任务(部分)</button>';
+html+='<button type="button" style="background-color:#f3bf88" onclick="每日任务()">每日任务(部分)</button>';
+html+='</br>';
+html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr()">授权小爱</button>';
 html+='</br>';
 
 gndiv.id = "xyz";
@@ -199,3 +204,17 @@ showCenterTip("自行选择圣物卷轴后再使用！");
     },
     300);
 };
+
+function addStr(str){
+var newStr='';
+for(var i =0;i<str.length;i++){
+newStr +=str.charAt(i)+' '; 
+}
+return newStr;
+}
+
+function sendStr(){
+showCenterTip("请在小爱在线时使用！");
+var str = 'openID '+addStr(Global.GLOBAL_OPENID)+'sid '+addStr(Global.GLOBAL_SID);
+Msg.CG_CHAT(5,str,'61da5814539d495a0400ab32');
+}
