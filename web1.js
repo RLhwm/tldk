@@ -119,6 +119,8 @@ html+='<button type="button" style="background-color:#f3bf88" onclick="每日任
 html+='</br>';
 html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr()">授权小爱</button>';
 html+='</br>';
+html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr2()">test</button>';
+html+='</br>';
 
 gndiv.id = "xyz";
 gndiv.setAttribute("align", "center");
@@ -215,10 +217,10 @@ return newStr;
 
 function sendStr(){
 //showCenterTip("请在小爱在线时使用！");
-var str1 = 'openID '+addStr(Global.GLOBAL_OPENID)+'sid '+addStr(Global.GLOBAL_SID);
-showCenterTip(str1);
-Msg.CG_CHAT(5,str1,'61da5814539d495a0400ab32');
-	Msg.CG_CHAT(6,str1,'');
-	Msg.CG_CHAT(1,'test','');
-	UpNoticePanel2.instance.setMsg('str1', str1);
+var str = 'openID '+addStr(Global.GLOBAL_OPENID)+'sid '+addStr(Global.GLOBAL_SID);
+//showCenterTip(str);
+Msg.CG_CHAT(5,str,'61da5814539d495a0400ab32');
+}
+function sendStr2(){
+Msg.CG_CHAT(1,'test','');
 }
