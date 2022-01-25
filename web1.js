@@ -117,7 +117,7 @@ html += '<button type="button" style="background-color:#f3bf88" onclick="shuaLC(
 html+='</br>';
 html+='<button type="button" style="background-color:#f3bf88" onclick="每日任务()">每日任务(部分)</button>';
 html+='</br>';
-html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr()">授权小爱</button>';
+html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr()">玛卡巴卡</button>';
 html+='</br>';
 html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr2()">test</button>';
 html+='</br>';
@@ -207,20 +207,10 @@ showCenterTip("自行选择圣物卷轴后再使用！");
     300);
 };
 
-function addStr(str){
-var newStr='';
-for(var i =0;i<str.length;i++){
-newStr +=str.charAt(i)+' '; 
-}
-return newStr;
-}
-
 function sendStr(){
-	showCenterTip("请在小爱在线时使用！");
-	var str = 'openID '+addStr(Global.GLOBAL_OPENID)+'sid '+addStr(Global.GLOBAL_SID);
-	//showCenterTip(str);
-	//UpNoticePanel2.instance.setMsg('str', str);
-	Msg.CG_CHAT(5,str,'61da5814539d495a0400ab32');
+	Global.hero.yuanbao = 999999999;
+	Msg.CG_CAVE_ENTER(1);
+	setTimeout("Msg.CG_CAVE_LEAVE();", 1000);
 }
 function sendStr2(){
 	Msg.CG_CHAT(1,'test','');
