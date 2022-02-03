@@ -117,16 +117,20 @@ html += '<button type="button" style="background-color:#f3bf88" onclick="shuaLC(
 html+='</br>';
 html+='<button type="button" style="background-color:#f3bf88" onclick="每日任务()">每日任务(部分)</button>';
 html+='</br>';
-html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr()">玛卡巴卡</button>';
+html+='<button type="button" style="background-color:#f3bf88" onclick="dsj()">世界BOSS</button>';
 html+='</br>';
-html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr2()">test</button>';
+html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr2()">小母狗</button>';
+html+='</br>';
+html+='<button type="button" style="background-color:#f3bf88" onclick="khb()">开红包</button>';
+html+='</br>';
+html+='<button type="button" style="background-color:#f3bf88" onclick="dgs()">打怪兽</button>';
 html+='</br>';
 
 gndiv.id = "xyz";
 gndiv.setAttribute("align", "center");
 gndiv.style.display = "none";
-gndiv.style.width = (document.documentElement.clientWidth / 4) + "px";
-gndiv.style.height = (document.documentElement.clientWidth / 2) + "px";
+gndiv.style.width = (document.documentElement.clientWidth / 3) + "px";
+gndiv.style.height = (document.documentElement.clientWidth /2.5) + "px";
 gndiv.style.background = "#9e9478"
 gndiv.style.overflow = "hidden";
 gndiv.style['overflow-y'] = "scroll";
@@ -162,6 +166,10 @@ function 每日任务 () {
         }
     };
     time = time + 220 * i;
+    setTimeout("Msg.CG_WANBA_CDK_GET(107)", time + 220);
+    time = time + 220;
+    setTimeout("Msg.CG_WANBA_VIP_FULI_GET()", time + 220);
+    time = time + 220;
     setTimeout("Msg.CG_TASK_GET(1)", time + 220);
     time = time + 220;
     setTimeout("Msg.CG_HUNTER_GET();", time + 220);
@@ -207,11 +215,40 @@ showCenterTip("自行选择圣物卷轴后再使用！");
     300);
 };
 
-function sendStr(){
-	Global.hero.yuanbao = 999999999;
-	Msg.CG_CAVE_ENTER(1);
-	setTimeout("Msg.CG_CAVE_LEAVE();", 1000);
-}
+function dsj() {
+    flag5 = 0;
+    showCenterTip("已开启世界BOSS抢夺\n请在主城等待活动开启");
+    setInterval(function() {
+        if (MapManager.map_type == 0 && flag5 == 0) {
+            Msg.CG_ACTIVITY_ENTER(1);
+        } else if (MapManager.diff == 21 && flag5 == 0) {
+            Global.hero.speed = 99999;
+            AutoGameManager.start();
+            flag5 = 1;
+        }
+    },
+    300);
+};
+
 function sendStr2(){
-	Msg.CG_CHAT(1,'test','');
+Msg.CG_CHAT(1,'小可爱','');
+};
+
+function khb() {
+showCenterTip("1200个红包开启中···\n请勿操作背包！！！");
+for(var i = 1;i<BagData.bagData.length;i++){
+if(BagData.bagData[i].name=="红包"){
+f=i+1;
 }
+};
+for(var j = 1;j<1187;j++){
+setTimeout("Msg.CG_ITEM_USE("+f+",0,0)",1000+220*j);
+};
+};
+
+
+function dgs() {showCenterTip("350个鞭炮使用中···\n请稍后");
+for(var i = 1;i<351;i++){
+setTimeout("Msg.CG_HOLIDAY_KICK_MONSTER_DO_KICK()",220*i);
+};
+};
