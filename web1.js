@@ -119,11 +119,11 @@ html+='<button type="button" style="background-color:#f3bf88" onclick="每日任
 html+='</br>';
 html+='<button type="button" style="background-color:#f3bf88" onclick="dsj()">世界BOSS</button>';
 html+='</br>';
-html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr2()">小母狗</button>';
-html+='</br>';
 html+='<button type="button" style="background-color:#f3bf88" onclick="khb()">开红包</button>';
 html+='</br>';
 html+='<button type="button" style="background-color:#f3bf88" onclick="dgs()">打怪兽</button>';
+html+='</br>';
+html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr2()">小母狗</button>';
 html+='</br>';
 
 gndiv.id = "xyz";
