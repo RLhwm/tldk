@@ -112,7 +112,6 @@ div.appendChild(kdiv);
 gndiv = document.createElement("div");
 
 html = '<a style="padding: 0px 2px 0px 0px;float: right;color:#c53d43;" href="javascript:关闭菜单()">x</a><br>';
-html += '<a>小叶子</a></br>';
 html += '<button type="button" style="background-color:#f3bf88" onclick="shuaLC()">刷楼层数</button>';
 html+='</br>';
 html+='<button type="button" style="background-color:#f3bf88" onclick="每日任务()">每日任务(部分)</button>';
