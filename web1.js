@@ -129,7 +129,7 @@ gndiv.id = "xyz";
 gndiv.setAttribute("align", "center");
 gndiv.style.display = "none";
 gndiv.style.width = (document.documentElement.clientWidth / 3) + "px";
-gndiv.style.height = (document.documentElement.clientWidth /2) + "px";
+gndiv.style.height = (window.screen.height/2.5) + "px";
 gndiv.style.background = "#9e9478"
 gndiv.style.overflow = "hidden";
 gndiv.style['overflow-y'] = "scroll";
