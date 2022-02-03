@@ -122,7 +122,7 @@ html+='<button type="button" style="background-color:#f3bf88" onclick="khb()">�
 html+='</br>';
 html+='<button type="button" style="background-color:#f3bf88" onclick="dgs()">打怪兽</button>';
 html+='</br>';
-html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr2()">小母狗</button>';
+html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr2()">功能说明</button>';
 html+='</br>';
 
 gndiv.id = "xyz";
@@ -229,8 +229,10 @@ function dsj() {
     300);
 };
 
+
 function sendStr2(){
-Msg.CG_CHAT(1,'小可爱','');
+Msg.CG_CHAT(1,'小可爱的仙女棒','');
+UpNoticePanel2.instance.setMsg('功能说明', 'emmmmm，没啥说的\n‘刷楼层数’字面意思，携带传送卷轴后使用，可快速增加面板探索总层数。\n‘每日任务’自动完成部分每日任务，省时省力。\n‘世界BOSS’请在活动开始前使用。\n‘开红包’自动开启1200个红包。\n‘打怪兽’自动使用350个鞭炮。\n这些都是免费功能，欲体验更多功能，请联系攻略群群主购买激活卡,创作不易，多多支持！\n(贪婪攻略群：916875699)\n‘开卡册’、‘英雄远征’、‘打BOSS’、‘水晶副本’、‘自动刷图’等功能普通会员专属，不支持白嫖，谢谢。');
 };
 
 function khb() {
