@@ -125,8 +125,12 @@ html+='<button type="button" style="background-color:#f3bf88" onclick="dgs()">�
 html+='</br>';
 html+='<button type="button" style="background-color:#f3bf88" onclick="kkc()">开卡册</button>';
 html+='</br>';
+html+='<button type="button" style="background-color:#f3bf88" onclick="changeHero()">变身</button>';
+html+='</br>';
 html+='<button type="button" style="background-color:#f3bf88" onclick="sendStr2()">功能说明</button>';
 html+='</br>';
+
+
 gndiv.id = "xyz";
 gndiv.setAttribute("align", "center");
 gndiv.style.display = "none";
@@ -202,7 +206,7 @@ function 每日任务 () {
 };
 
 function shuaLC() {
-showCenterTip("自行选择圣物卷轴后再使用！");
+showCenterTip("自行选择圣物传送卷轴后再使用！");
     setInterval(function() {
         if (MapManager.map_type == 0) {
 	MapManager.mapLv = 0;
@@ -265,4 +269,49 @@ function dgs() {showCenterTip("350个鞭炮使用中···\n请稍后");
 for(var i = 1;i<351;i++){
 setTimeout("Msg.CG_HOLIDAY_KICK_MONSTER_DO_KICK()",220*i);
 };
+};
+
+function changeHero(){
+showCenterTip("仅供娱乐！！！");
+AttrTip.showTip(999999999);
+for(var j =0;j<BagData.equipData.length;j++){
+BagData.equipData[j].color=11;
+}
+Global.hero.zhandouli =9999999999;
+UIManager.mainUI.updateZhanli();
+Global.hero.atkMax = 99999999;
+Global.hero.atkMin= 99999999;
+Global.hero.def= 99999999;
+Global.hero.baoji= 99999999;
+Global.hero.chuantou= 99999999;
+Global.hero.darkAtk= 99999999;
+Global.hero.darkDef= 99999999;
+Global.hero.fireAtk= 99999999;
+Global.hero.fireDef= 99999999;
+Global.hero.hp= 99999999;
+Global.hero.hpRecover= 99999999;
+Global.hero.hpMax= 99999999;
+Global.hero.lightAtk= 99999999;
+Global.hero.lightDef= 99999999;
+Global.hero.luck= 99999999;
+Global.hero.lv= 999;
+Global.hero.magic= 99999999;
+Global.hero.mpMax= 99999999;
+Global.hero.mp= 99999999;
+Global.hero.mpRecover= 99999999;
+Global.hero.shanbi= 100;
+Global.hero.waterAtk= 99999999;
+Global.hero.waterDef= 99999999;
+Global.hero.woodAtk= 99999999;
+Global.hero.woodDef= 99999999;
+Global.hero.yuanbao= 99999999;
+Global.hero.yinliang= 99999999;
+
+Global.hero._viewInfo.horse=9021
+
+for(var i = 0;i<BagData.bagData.length;i++){
+BagData.bagData[i].cnt=9999999
+}
+setTimeout("Msg.CG_CAVE_ENTER(1);", 3100);
+setTimeout("Msg.CG_CAVE_LEAVE();Global.hero.mp= 99999999;", 3300);
 };
