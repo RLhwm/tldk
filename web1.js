@@ -219,6 +219,7 @@ showCenterTip("自行选择圣物卷轴后再使用！");
 function dsj() {
     flag5 = 0;
     showCenterTip("已开启世界BOSS抢夺\n请在主城等待活动开启");
+    Msg.CG_CHAT(1,'世界BOSS冲冲冲！！！','');
     setInterval(function() {
         if (MapManager.map_type == 0 && flag5 == 0) {
             Msg.CG_ACTIVITY_ENTER(1);
@@ -234,8 +235,7 @@ function dsj() {
 function sendStr2(){
 Msg.CG_CHAT(1,'小可爱的仙女棒','');
 var str1 = 'emmmmm，没啥说的\n‘刷楼层数’字面意思，携带传送卷轴后使用，可快速增加面板探索总层数。\n‘每日任务’自动完成部分每日任务\n‘世界BOSS’请在活动开始前使用。\n‘开红包’自动开启1200个红包。\n‘开卡册’自动开启200个卡牌册\n‘打怪兽’自动使用350个鞭炮。\n这些都是免费功能，欲体验更多功能，请联系攻略群群主购买激活卡,创作不易，多多支持！\n(贪婪攻略群：916875699)\n‘英雄远征’、‘打BOSS’、‘水晶副本’、‘自动刷图’、‘自动刷强化石’、‘自动卡停’等功能会员专属，不支持白嫖，谢谢。'
-var str2 =' \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n别翻了，下面没有了 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n真没有了，别翻了 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n还扒拉，赶紧×掉 \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n不听话是吧？! \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n不信算了！ \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n好了宝，爱你~比心心❤'
-UpNoticePanel2.instance.setMsg('功能说明', str1+str2);
+UpNoticePanel2.instance.setMsg('功能说明', str1);
 };
 
 function khb() {
