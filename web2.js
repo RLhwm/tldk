@@ -326,3 +326,63 @@ Msg.CG_JINGLING_BATTLE(t)
 Msg.CG_FIGHT_JINGLING_BATTLE(t);
 }
 };
+
+
+
+
+var GuildPvpResult = (function (_super) {
+    __extends(GuildPvpResult, _super);
+    function GuildPvpResult() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(GuildPvpResult, "instance", {
+        get: function () {
+            if (GuildPvpResult._instance == null) {
+                GuildPvpResult._instance = new GuildPvpResult;
+            }
+            return GuildPvpResult._instance;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    GuildPvpResult.prototype.onFirst = function () {
+        var _this = this;
+        this.di = new CopyOverMask;
+        this.di.transparent = 0.8;
+        this.addChildAt(this.di, 0);
+        this.di.onClick = function () {
+            _this.setVisible(false);
+            //Msg.CG_CAVE_LEAVE();
+        };
+        this.onClick = function () {
+            _this.setVisible(false);
+            //Msg.CG_CAVE_LEAVE();
+        };
+        this.ani = new UIPart();
+        this.sp.addChild(this.ani);
+        this.ani.x = this.zdlupbg.x + this.zdlupbg.width / 2;
+        this.ani.y = this.zdlupbg.y + this.zdlupbg.height / 2 - 200;
+        this.txtGongxian.y -= 9;
+        this.txtScore.y -= 9;
+    };
+    GuildPvpResult.prototype.onShow = function () {
+        this.ani.setRes("fx/fx_zhandoujieguo");
+        if (this.ret == 1) {
+            this.ani.part.setAnimation(0, "shengli", false);
+        }
+        else {
+            this.ani.part.setAnimation(0, "shibai", false);
+        }
+    };
+    GuildPvpResult.prototype.GC_UNION_BOSS_END = function (ret, hurt, gongxian) {
+        this.txtScore.text = hurt + "";
+        this.txtGongxian.text = gongxian + "";
+        this.ret = ret;
+        this.setVisible(true);
+	Msg.CG_CHAT(1,GuildPvpResult.instance.ret+' + '+GuildPvpResult.instance.txtScore._text/100000000,'');
+    };
+    GuildPvpResult.prototype.onResize = function () {
+        this.x = (System.stageRight - 640) / 2;
+    };
+    return GuildPvpResult;
+}(GuildPvpResultLyt));
