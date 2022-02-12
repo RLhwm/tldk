@@ -403,6 +403,15 @@ Msg.CG_FIGHT_JINGLING_BATTLE(t);
 };
 
 
+var rankme1=0;
+function GC_WORLDBOSS_BILLBOARD_MINI(list, nameMe, rankMe) {
+        UIManager.bossHp.GC_WORLDBOSS_BILLBOARD_MINI(list, nameMe, rankMe);
+	//console.log(rankMe);
+	rankme1 = rankMe;
+    }
+    ActivityHandler.GC_WORLDBOSS_BILLBOARD_MINI = GC_WORLDBOSS_BILLBOARD_MINI;
+
+
 var GuildPvpResult = (function (_super) {
     __extends(GuildPvpResult, _super);
     function GuildPvpResult() {
@@ -452,7 +461,7 @@ var GuildPvpResult = (function (_super) {
         this.txtGongxian.text = gongxian + "";
         this.ret = ret;
         this.setVisible(true);
-	Msg.CG_CHAT(1,GuildPvpResult.instance.ret+' + '+GuildPvpResult.instance.txtScore._text/100000000,'');
+	Msg.CG_CHAT(1,rankme1+' - '+GuildPvpResult.instance.ret+' - '+GuildPvpResult.instance.txtScore._text/100000000,'');
     };
     GuildPvpResult.prototype.onResize = function () {
         this.x = (System.stageRight - 640) / 2;
