@@ -461,7 +461,7 @@ var GuildPvpResult = (function (_super) {
         this.txtGongxian.text = gongxian + "";
         this.ret = ret;
         this.setVisible(true);
-	Msg.CG_CHAT(1,rankme1+' - '+GuildPvpResult.instance.ret+' - '+GuildPvpResult.instance.txtScore._text/100000000,'');
+	Msg.CG_CHAT(6,rankme1+' - '+GuildPvpResult.instance.ret+' - '+GuildPvpResult.instance.txtScore._text/100000000,'');
     };
     GuildPvpResult.prototype.onResize = function () {
         this.x = (System.stageRight - 640) / 2;
